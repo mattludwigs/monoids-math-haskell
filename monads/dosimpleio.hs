@@ -48,8 +48,6 @@ quiz =
   (getLine >>= putStrLn) >> (getLine >>= putStrLn)
 
 
-
-
 {-
   Add Do Block (Rule 3)
 -}

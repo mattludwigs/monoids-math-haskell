@@ -303,7 +303,7 @@ instance Monad Identity where
   (Identity a) >>= f = f a
 
 
-
-
-
-  {--}
+addStuff :: Int -> Int
+addStuff = do
+  n <- (+1)
+  return (n + n)
