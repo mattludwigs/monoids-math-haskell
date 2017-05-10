@@ -1,22 +1,13 @@
 module StateMo where
 
-import Control.Monad.State
+{-
+  s -> (a, s)
 
--- newtype State s a =
---   State { runState :: s -> (a, s) }
+  where s is the state and a is the internal object
 
-myState :: State String String
-myState = state (\s -> ("one", "two"))
+  newtype State s a =
+    State { runState :: s -> (a, s) }
 
+  State monad is a maker of monads 
 
-showResult :: Show a => State String a -> IO ()
-showResult st =
-  (putStrLn ("Frist: " ++ (show $ fst $ runState st ""))) >>
-    (putStrLn ("Second: " ++ (show $ snd $ runState st "")))
-
-
-showResult' :: Show a => State String a -> IO ()
-showResult' st = do
-  (first, second) <- return (runState st "any")
-  putStrLn ("First: " ++ (show first))
-  putStrLn ("Second: " ++ (show second))
+-}
